@@ -54,11 +54,11 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_Facebook"
+            android:id="@+id/fab_facebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
-            android:src="@drawable/Facebook"
+            android:src="@drawable/facebook"
             android:elevation="35dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +71,6 @@
     <ImageView
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/inverse_ourlogo"
         app:layout_constraintVertical_bias=".3"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +86,7 @@
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"/>
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"/>
 
 
 

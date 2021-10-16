@@ -72,6 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/pass"/>
 
     <TextView
+        android:clickable="true"
         android:id="@+id/adminLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,6 +81,7 @@
         tools:layout_editor_absoluteY="666dp" />
 
     <TextView
+        android:clickable="true"
         android:id="@+id/createAcc"
         android:layout_width="98dp"
         android:layout_height="27dp"
