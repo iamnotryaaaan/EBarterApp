@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="267dp"
+        android:layout_height="47dp"
+        android:paddingLeft="20dp"
+        android:ems="10"
+        android:hint="Desired Username"
+        android:background="@drawable/edit_text_bg"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="267dp"
+        android:layout_height="47dp"
+        android:paddingLeft="20dp"
+        android:ems="10"
+        android:hint="Password"
+        android:background="@drawable/edit_text_bg"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="267dp"
+        android:layout_height="47dp"
+        android:paddingLeft="20dp"
+        android:ems="10"
+        android:hint="Contact Number"
+        android:background="@drawable/edit_text_bg"
+        android:inputType="phone"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPostalAddress"
+        android:layout_width="267dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:hint="Address"
+        android:background="@drawable/edit_text_bg"
+        android:inputType="textPostalAddress"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="342dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="203dp"
+        android:layout_height="42dp"
+        android:text="Signup"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="511dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
