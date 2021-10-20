@@ -61,32 +61,32 @@
         android:id="@+id/forget_pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forgot Password"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintHorizontal_bias="1"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
+        android:text="Forgot Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/pass"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass"/>
+        app:layout_constraintTop_toBottomOf="@+id/pass"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:clickable="true"
         android:id="@+id/adminLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:text="Admin Login"
-        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteX="169dp"
         tools:layout_editor_absoluteY="666dp" />
 
     <TextView
-        android:clickable="true"
         android:id="@+id/createAcc"
         android:layout_width="98dp"
         android:layout_height="27dp"
+        android:clickable="true"
         android:text="Create Account"
-        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="544dp" />
 
 
