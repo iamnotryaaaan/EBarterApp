@@ -35,26 +35,6 @@ public class LoginActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.view_pager);
         Facebook = findViewById(R.id.fab_facebook);
 
-        user = findViewById(R.id.user);
-        pass = findViewById(R.id.pass);
-        forgetPass = findViewById(R.id.forget_pass);
-        login = findViewById(R.id.button);
-        adminLogin = findViewById(R.id.adminLogin);
-        createAcc = findViewById(R.id.createAcc);
-
-        user.setTranslationX(800);
-        pass.setTranslationX(800);
-        forgetPass.setTranslationX(800);
-        login.setTranslationX(800);
-        adminLogin.setTranslationX(800);
-        createAcc.setTranslationX(800);
-
-        user.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        pass.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        forgetPass.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        adminLogin.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        createAcc.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-
         tabLayout.addTab(tabLayout.newTab().setText("Login"));
         tabLayout.addTab(tabLayout.newTab().setText("Signup"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
@@ -71,6 +51,28 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout.setAlpha(v);
 
         Facebook.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                user = findViewById(R.id.user);
+                pass = findViewById(R.id.pass);
+                forgetPass = findViewById(R.id.forget_pass);
+                login = findViewById(R.id.button);
+                adminLogin = findViewById(R.id.adminLogin);
+                createAcc = findViewById(R.id.createAcc);
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
 
     }
