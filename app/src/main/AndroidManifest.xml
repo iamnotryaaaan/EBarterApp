@@ -13,7 +13,7 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".EBarterApp"
             android:exported="true">
 
         <intent-filter>

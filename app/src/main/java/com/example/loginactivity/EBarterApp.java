@@ -13,7 +13,7 @@ import com.google.android.material.tabs.TabLayout;
 
 import org.w3c.dom.Text;
 
-public class LoginActivity extends AppCompatActivity {
+public class EBarterApp extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
