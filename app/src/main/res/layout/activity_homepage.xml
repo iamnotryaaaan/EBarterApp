@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/edit_text_bg"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteY="608dp" />
+
+    <SearchView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text_bg"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="57dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Goodies Here!"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="180dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="152dp"
+        android:layout_height="56dp"
+        android:text="Transactions"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="369dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="616dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Profile"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate App"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="437dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="497dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

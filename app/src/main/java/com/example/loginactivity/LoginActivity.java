@@ -23,8 +23,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText pass;
     TextView forgetPass;
     Button login;
-    TextView adminLogin;
-    TextView createAcc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -59,8 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                 pass = findViewById(R.id.pass);
                 forgetPass = findViewById(R.id.forget_pass);
                 login = findViewById(R.id.button);
-                adminLogin = findViewById(R.id.adminLogin);
-                createAcc = findViewById(R.id.createAcc);
+
             }
 
             @Override
