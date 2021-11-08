@@ -29,13 +29,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        tabLayout = findViewById(R.id.tab_layout);
+        tabLayout = findViewById(R.id.tab_layouts);
         viewPager = findViewById(R.id.view_pager);
         Facebook = findViewById(R.id.fab_facebook);
 
         tabLayout.addTab(tabLayout.newTab().setText("Login"));
         tabLayout.addTab(tabLayout.newTab().setText("Signup"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        //tabLayout.setupWithViewPager(viewPager);
 
         final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this,tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
@@ -53,11 +55,6 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                user = findViewById(R.id.user);
-                pass = findViewById(R.id.pass);
-                forgetPass = findViewById(R.id.forget_pass);
-                login = findViewById(R.id.button);
-
             }
 
             @Override
@@ -70,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+
 
 
     }
