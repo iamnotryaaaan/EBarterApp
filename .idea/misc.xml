@@ -3,27 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/drawable/button_bg.xml" value="0.11614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/drawable/edit_text_bg.xml" value="0.11614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.11614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/drawable/vie_bg.xml" value="0.11614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/drawable/view_bg.xml" value="0.11614583333333334" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/layout-w936dp/activity_login.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/layout/activity_homepage.xml" value="0.19610507246376813" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/layout/activity_login.xml" value="0.17798913043478262" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/layout/activity_post.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/layout/activity_rate.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/layout/login_tab_fragment.xml" value="0.17798913043478262" />
+        <entry key="..\:/AndroidStudioProjects/EBarterApp/app/src/main/res/layout/signup_tab_fragment.xml" value="0.17798913043478262" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3828125" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/drawable/button_bg.xml" value="0.3828125" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/drawable/edit_text_bg.xml" value="0.3828125" />
-        <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/drawable/ic_menu_camera.xml" value="0.3828125" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.3828125" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/drawable/vie_bg.xml" value="0.3828125" />
-        <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1318607764390897" />
-        <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout-w936dp/activity_login.xml" value="0.15390625" />
-        <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_feedback.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_homepage.xml" value="0.25" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
-        <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_main2.xml" value="0.25" />
-        <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_message.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_post.xml" value="0.33" />
-        <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_profile.xml" value="0.25" />
-        <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_rate.xml" value="0.33" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_search_bar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_test.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/activity_transactions.xml" value="0.33" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/content_homepage.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/fragment_gallery.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/envy/AndroidStudioProjects/LoginActivity/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
