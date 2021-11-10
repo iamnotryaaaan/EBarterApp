@@ -42,14 +42,14 @@
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="409dp"
+            android:layout_height="423dp"
+            android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toTopOf="@id/fab_facebook"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="32dp"
-            app:layout_constraintVertical_bias="0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_facebook"
@@ -58,11 +58,12 @@
             android:backgroundTint="#4267B2"
             android:elevation="35dp"
             android:src="@drawable/facebook_icon"
-            app:layout_constraintVertical_bias="0.9"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view_pager" />
+            app:layout_constraintTop_toTopOf="@+id/view_pager"
+            app:layout_constraintVertical_bias="0.95" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -40,8 +40,7 @@ public class EBarterApp extends AppCompatActivity {
     FloatingActionButton Facebook;
     float v=0;
     TextInputLayout user, pass;
-    TextInputLayout email, password, number, address;
-    TextView forgetPass;
+    TextInputLayout email, password, number, address, name;
     Button login, signup;
     FirebaseFirestore db;
     FirebaseAuth auth;
@@ -57,9 +56,7 @@ public class EBarterApp extends AppCompatActivity {
 
         tabLayout.addTab(tabLayout.newTab().setText("Login"));
         tabLayout.addTab(tabLayout.newTab().setText("Signup"));
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
-        //tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setTabGravity(tabLayout.GRAVITY_FILL);
 
         final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this,tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
@@ -86,6 +83,7 @@ public class EBarterApp extends AppCompatActivity {
                 address = findViewById(R.id.sign_address);
                 login = findViewById(R.id.login_button);
                 signup = findViewById(R.id.signup_button);
+                name = findViewById(R.id.sign_name);
 
                 signup.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -250,9 +248,10 @@ public class EBarterApp extends AppCompatActivity {
         }
 
         String userEmail = email.getEditText().getText().toString().trim();
-        String name = number.getEditText().getText().toString().trim();
+        String userNumber = number.getEditText().getText().toString().trim();
         String userAddress = address.getEditText().getText().toString().trim();
         String userPassword = password.getEditText().getText().toString().trim();
+        String userName = name.getEditText().getText().toString().trim();
 
         Intent intent = new Intent(this, HomePage.class);
 
@@ -295,9 +294,10 @@ public class EBarterApp extends AppCompatActivity {
 
         Map<String, Object> user = new HashMap<>();
         user.put("Email", userEmail);
-        user.put("Name", name);
+        user.put("Number", userNumber);
         user.put("Address", userAddress);
-        user.put("password", userPassword);
+        user.put("Password", userPassword);
+        user.put("Name", userName);
 
         db.collection("users").document(userEmail).set(user)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
