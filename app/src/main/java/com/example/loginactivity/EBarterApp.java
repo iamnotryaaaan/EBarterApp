@@ -26,6 +26,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.ActionCodeSettings;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.w3c.dom.Text;
@@ -48,77 +49,88 @@ public class EBarterApp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
 
-        tabLayout = findViewById(R.id.tab_layouts);
-        viewPager = findViewById(R.id.view_pager);
-        Facebook = findViewById(R.id.fab_facebook);
+        auth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = auth.getCurrentUser();
+        if (firebaseUser!=null) {
+            startActivity(new Intent(this, Feed.class));
+            finish();
+        }
+        else {
+            setContentView(R.layout.activity_login);
 
-        tabLayout.addTab(tabLayout.newTab().setText("Login"));
-        tabLayout.addTab(tabLayout.newTab().setText("Signup"));
-        tabLayout.setTabGravity(tabLayout.GRAVITY_FILL);
+            tabLayout = findViewById(R.id.tab_layouts);
+            viewPager = findViewById(R.id.view_pager);
+            Facebook = findViewById(R.id.fab_facebook);
 
-        final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this,tabLayout.getTabCount());
-        viewPager.setAdapter(adapter);
+            tabLayout.addTab(tabLayout.newTab().setText("Login"));
+            tabLayout.addTab(tabLayout.newTab().setText("Signup"));
+            tabLayout.setTabGravity(tabLayout.GRAVITY_FILL);
 
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+            final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this,tabLayout.getTabCount());
+            viewPager.setAdapter(adapter);
 
-        Facebook.setTranslationY(300);
-        tabLayout.setTranslationY(300);
+            viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
-        Facebook.setAlpha(v);
-        tabLayout.setAlpha(v);
+            Facebook.setTranslationY(300);
+            tabLayout.setTranslationY(300);
 
-        Facebook.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+            Facebook.setAlpha(v);
+            tabLayout.setAlpha(v);
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
+            Facebook.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
 
-                user = findViewById(R.id.user);
-                pass = findViewById(R.id.pass);
-                email = findViewById(R.id.sign_username);
-                password = findViewById(R.id.sign_password);
-                number = findViewById(R.id.sign_number);
-                address = findViewById(R.id.sign_address);
-                login = findViewById(R.id.login_button);
-                signup = findViewById(R.id.signup_button);
-                name = findViewById(R.id.sign_name);
+            tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+                @Override
+                public void onTabSelected(TabLayout.Tab tab) {
 
-                signup.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        signupUser();
-                    }
-                });
+                    user = findViewById(R.id.user);
+                    pass = findViewById(R.id.pass);
+                    email = findViewById(R.id.sign_username);
+                    password = findViewById(R.id.sign_password);
+                    number = findViewById(R.id.sign_number);
+                    address = findViewById(R.id.sign_address);
+                    login = findViewById(R.id.login_button);
+                    signup = findViewById(R.id.signup_button);
+                    name = findViewById(R.id.sign_name);
 
-                login.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        loginUser();
+                    signup.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            signupUser();
+                        }
+                    });
 
-                        pass.getEditText().setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                            @Override
-                            public void onFocusChange(View view, boolean b) {
-                                pass.setError(null);
-                            }
-                        });
+                    login.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            loginUser();
 
-                    }
-                });
+                            pass.getEditText().setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                                @Override
+                                public void onFocusChange(View view, boolean b) {
+                                    pass.setError(null);
+                                }
+                            });
 
-            }
+                        }
+                    });
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
+                }
 
-            }
+                @Override
+                public void onTabUnselected(TabLayout.Tab tab) {
 
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
+                }
 
-            }
-        });
+                @Override
+                public void onTabReselected(TabLayout.Tab tab) {
+
+                }
+            });
+        }
+
+
 
     }
 
@@ -253,7 +265,7 @@ public class EBarterApp extends AppCompatActivity {
         String userPassword = password.getEditText().getText().toString().trim();
         String userName = name.getEditText().getText().toString().trim();
 
-        Intent intent = new Intent(this, HomePage.class);
+        Intent intent = new Intent(this, Feed.class);
 
         db = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
@@ -324,7 +336,7 @@ public class EBarterApp extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
 
-        Intent intent = new Intent(this, HomePage.class);
+        Intent intent = new Intent(this, Feed.class);
 
         String userEnteredEmail = user.getEditText().getText().toString().trim();
         String userEnteredPassword = pass.getEditText().getText().toString().trim();

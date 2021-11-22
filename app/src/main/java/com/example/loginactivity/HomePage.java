@@ -30,7 +30,7 @@ public class HomePage extends AppCompatActivity {
         transact = findViewById(R.id.transactions);
 
         Intent passedValues = getIntent();
-        email = passedValues.getStringExtra("email");
+        email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
         Intent intent = new Intent(this, EBarterApp.class);
         displayUser();

@@ -80,6 +80,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/imageButton"
         app:layout_constraintBottom_toTopOf="@id/transactions"
         app:layout_constraintEnd_toEndOf="parent"
