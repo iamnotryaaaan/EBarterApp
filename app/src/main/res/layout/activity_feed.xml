@@ -7,10 +7,12 @@
     tools:context=".Feed">
 
     <TextView
+        android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Feed"
+        android:text="Profile"
         android:textSize="40sp"
+        android:clickable="true"
         app:layout_constraintHorizontal_bias="0.1"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/const_layout"
@@ -72,6 +74,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+            android:id="@+id/ratebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:backgroundTint="@color/sky"
+            android:text="Rate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/create_item"
+            app:layout_constraintHorizontal_bias="0.133"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/disp_empty"
+            app:layout_constraintVertical_bias="0.807" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

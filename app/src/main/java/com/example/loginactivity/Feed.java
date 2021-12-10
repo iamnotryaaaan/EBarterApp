@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.loginactivity.ui.login.RVAdapter;
@@ -33,6 +34,9 @@ public class Feed extends AppCompatActivity {
     RVAdapter rvAdapter;
     TextView dispEmpty, logOut;
     FloatingActionButton create;
+    Button rate;
+    TextView profile;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,8 @@ public class Feed extends AppCompatActivity {
         setContentView(R.layout.activity_feed);
 
         Intent intent = new Intent(this, Post.class);
+        Intent startRate = new Intent(this,Rate.class);
+        Intent startProfile = new Intent(this,Profile.class);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -49,6 +55,8 @@ public class Feed extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         create = findViewById(R.id.create_item);
         logOut = findViewById(R.id.logout);
+        rate = findViewById(R.id.ratebutton);
+        profile = findViewById(R.id.profile);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -60,6 +68,21 @@ public class Feed extends AppCompatActivity {
         recyclerView.setAdapter(rvAdapter);
 
         EventChangeListener();
+
+        rate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(startRate);
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(startProfile);
+            }
+        });
+
 
         create.setOnClickListener(new View.OnClickListener() {
             @Override

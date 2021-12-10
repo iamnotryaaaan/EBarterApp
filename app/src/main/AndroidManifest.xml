@@ -21,6 +21,12 @@
             android:name=".Feed"
             android:exported="false" />
         <activity
+            android:name=".Rate"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
