@@ -51,8 +51,19 @@ public class ViewItem extends AppCompatActivity {
         item = findViewById(R.id.view_item);
 
         Intent home = new Intent(this, Feed.class);
-
+        Intent startProfile = new Intent(this,Profile.class);
+        Intent startProfile2 = new Intent(this,Profile2.class);
         displayReport();
+
+        name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = getIntent();
+                String user = intent.getStringExtra("user");
+                startProfile2.putExtra("user",user);
+                startActivity(startProfile2);
+            }
+        });
 
         returnHome.setOnClickListener(new View.OnClickListener() {
             @Override
