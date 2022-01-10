@@ -217,9 +217,6 @@ public class EBarterApp extends AppCompatActivity {
         if (val.isEmpty()) {
             address.setError("Field cannot be Empty");
             return false;
-        } else if (val.matches(noWhiteSpace)) {
-            address.setError("Field cannot contain White Space");
-            return false;
         } else {
             address.setError(null);
             address.setErrorEnabled(false);

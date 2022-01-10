@@ -11,6 +11,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,16 +32,21 @@ import java.util.Date;
 
 public class ViewItem extends AppCompatActivity {
 
-    TextView name, description, location, date, item;
+    TextView name, description, location, date, item, dispBarter, isBarter;
     ImageView vPicture;
     FirebaseFirestore db;
     ImageView returnHome;
     StorageReference reference;
+    CheckBox checkBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_item);
+
+        Intent intent = getIntent();
+        String rName = intent.getStringExtra("name");
+        String user = intent.getStringExtra("user");
 
         name = findViewById(R.id.view_user);
         description = findViewById(R.id.view_description);
@@ -49,6 +55,9 @@ public class ViewItem extends AppCompatActivity {
         returnHome = findViewById(R.id.return_button);
         vPicture = findViewById(R.id.view_photo);
         item = findViewById(R.id.view_item);
+        dispBarter = findViewById(R.id.display_barter);
+        checkBox = findViewById(R.id.checkbox);
+        isBarter = findViewById(R.id.is_barter);
 
         Intent home = new Intent(this, Feed.class);
         Intent startProfile = new Intent(this,Profile.class);
@@ -73,6 +82,24 @@ public class ViewItem extends AppCompatActivity {
             }
         });
 
+        if (checkBox.isChecked()) {
+            Toast.makeText(ViewItem.this, "Item Checked", Toast.LENGTH_LONG).show();
+            db.collection("items").document(rName+user)
+                    .update("isBartered", "true")
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(ViewItem.this, "Item Successfully Bartered", Toast.LENGTH_SHORT).show();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(ViewItem.this, "Unsuccessful", Toast.LENGTH_SHORT).show();
+                }
+            });
+            checkBox.setChecked(true);
+        }
+
     }
 
     private void displayReport() {
@@ -94,17 +121,29 @@ public class ViewItem extends AppCompatActivity {
                             String displayDescription = documentSnapshot.getString("itemDescription");
                             String displayLocation = documentSnapshot.getString("itemLocation");
                             Date displayDate = documentSnapshot.getDate("itemDate");
+                            Boolean isBartered = documentSnapshot.getBoolean("isBartered");
                             item.setText(displayName);
                             description.setText(displayDescription);
                             location.setText(displayLocation);
                             date.setText(dateFormatter.format(displayDate));
+
+                            if (isBartered) {
+                                dispBarter.setText("Item is Successfully Bartered");
+                            }
 
                             db.collection("users").document(user).get()
                                     .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                                         @Override
                                         public void onSuccess(DocumentSnapshot documentSnapshot) {
                                             String userName = documentSnapshot.getString("Name");
+                                            String userEmail = documentSnapshot.getString("Email");
                                             name.setText(userName);
+
+                                            if (userEmail.matches(email)) {
+                                                checkBox.setVisibility(View.VISIBLE);
+                                                isBarter.setVisibility(View.VISIBLE);
+                                            }
+
                                         }
                                     });
 

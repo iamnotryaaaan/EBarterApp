@@ -170,6 +170,43 @@
             app:layout_constraintTop_toBottomOf="@+id/view_date"
             app:layout_constraintVertical_bias="0.1" />
 
+        <TextView
+            android:id="@+id/display_barter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_date"/>
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintVertical_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view_photo" />
+
+        <TextView
+            android:id="@+id/is_barter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Bartered"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/checkbox"
+            app:layout_constraintTop_toTopOf="@id/checkbox" />
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

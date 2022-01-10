@@ -124,6 +124,7 @@ public class Post extends AppCompatActivity {
                         items.put("itemDescription", description);
                         items.put("itemName", name);
                         items.put("itemDate", getDateFromString(currDate));
+                        items.put("isBartered", false);
 
                         System.out.println(getDateFromString(currDate));
                         System.out.println(currDate);
